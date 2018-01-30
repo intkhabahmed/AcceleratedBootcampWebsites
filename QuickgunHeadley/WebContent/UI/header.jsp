@@ -11,7 +11,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="BeneesFradia"></a>
+	      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Quickgun Headley"></a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->

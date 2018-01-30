@@ -11,7 +11,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="index.html"><img src="images/BC_logo.png" height="70" alt="Team1"></a>
+	      <a class="navbar-brand" href="index.html"><img src="images/BC_logo.png" alt="Benefits Cards"></a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
