@@ -17,7 +17,7 @@
 	<div id="profile_logo_container">
 		<div class="container">
 			<div class="col-sm-6">
-				<a id="profileLogo" href="index.html"><img src="images/BC_logo.png" alt="Financial Expert Ltd"></a>
+				<a id="profileLogo" href="index.html"><img src="images/team1logo.png" alt="Financial Expert Ltd"></a>
 			</div>
 			<div class="col-sm-6">
 				<ul class="nav navbar-nav navbar-right">
