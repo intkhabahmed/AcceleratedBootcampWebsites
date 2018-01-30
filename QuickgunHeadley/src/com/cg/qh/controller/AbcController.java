@@ -39,7 +39,7 @@ public class AbcController {
 	@RequestMapping(value = "/login.html", method = RequestMethod.POST)
 	public String login(@RequestParam("username") String username,
 			@RequestParam("password") String password, Model model) {
-		String returnValue = "index";
+		String returnValue = "redirect:index.html";
 		try {
 			User user = abcServices.ValidateLogin(username, password);
 			if (user.getUsername().equals("beneesfradia")) {
@@ -64,7 +64,7 @@ public class AbcController {
 		if (!status.isComplete()) {
 			status.setComplete();
 		}
-		return "index";
+		return "redirect:index.html";
 	}
 
 	@RequestMapping(value = "/uploadFile.html", method = RequestMethod.POST)

@@ -59,7 +59,7 @@ Create sequence queryid_sequence start with 1
 Create sequence messageid_sequence start with 1
 /
 
-INSERT INTO ABC_USERS VALUES('beneesfradia', 'beneesfradia', 'beneesfradia', '9876543210')
+INSERT INTO ABC_USERS VALUES('beneesfradia', 'beneesfradia', 'BeneesFradia', '9876543210')
 /
 INSERT INTO ABC_USERS VALUES('benefitscards', 'benefitscards', 'benefitscards', '9876543210')
 /
@@ -67,7 +67,7 @@ INSERT INTO ABC_USERS VALUES('borasys', 'borasys', 'borasys', '9876543210')
 /
 INSERT INTO ABC_USERS VALUES('financialexpert', 'financialexpert', 'financialexpert', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('quickgunheadley', 'quickgunheadley', 'quickgunheadley', '9876543210')
+INSERT INTO ABC_USERS VALUES('quickgunheadley', 'quickgunheadley', 'QuickgunHeadley', '9876543210')
 /
 INSERT INTO ABC_USERS VALUES('silvertax', 'silvertax', 'silvertax', '9876543210')
 /

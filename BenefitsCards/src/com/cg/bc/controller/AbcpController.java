@@ -37,7 +37,7 @@ public class AbcpController {
 	@RequestMapping(value = "/login.html", method = RequestMethod.POST)
 	public String login(@RequestParam("username") String username,
 			@RequestParam("password") String password, Model model) {
-		String returnValue = "index";
+		String returnValue = "redirect:index.html";
 		try {
 			User user = abcpServices.ValidateLogin(username, password);
 			if (!user.getUsername().equals("benefitscards")) {
@@ -59,7 +59,7 @@ public class AbcpController {
 		if (!status.isComplete()) {
 			status.setComplete();
 		}
-		return "index";
+		return "redirect:index.html";
 	}
 
 	@RequestMapping(value = "/downloadProposal.html", method = RequestMethod.GET)

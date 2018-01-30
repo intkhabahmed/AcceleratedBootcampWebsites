@@ -58,7 +58,7 @@ public class AbcDAOImpl implements AbcDAO {
 	public List<Proposal> getProposals() throws SQLException {
 		TypedQuery<Proposal> query = entityManager
 				.createQuery(
-						"SELECT proposal FROM Proposal proposal WHERE proposal.companyName='beneesfradia' ORDER BY proposal.proposalDate DESC",
+						"SELECT proposal FROM Proposal proposal WHERE proposal.companyName='BeneesFradia' ORDER BY proposal.proposalDate DESC",
 						Proposal.class);
 		return query.getResultList();
 	}
@@ -67,7 +67,7 @@ public class AbcDAOImpl implements AbcDAO {
 	public List<Query> getQueries() throws SQLException {
 		TypedQuery<Query> query = entityManager
 				.createQuery(
-						"SELECT query FROM Query query WHERE query.receiver='beneesfradia' ORDER BY query.queryDate DESC",
+						"SELECT query FROM Query query WHERE query.receiver='BeneesFradia' ORDER BY query.queryDate DESC",
 						Query.class);
 		return query.getResultList();
 	}
@@ -76,7 +76,7 @@ public class AbcDAOImpl implements AbcDAO {
 	public List<Proposal> getProposal(String teamName) throws SQLException {
 		TypedQuery<Proposal> query = entityManager
 				.createQuery(
-						"SELECT proposal FROM Proposal proposal WHERE proposal.companyName='beneesfradia' AND  proposal.teamName=:teamName",
+						"SELECT proposal FROM Proposal proposal WHERE proposal.companyName='BeneesFradia' AND  proposal.teamName=:teamName",
 						Proposal.class);
 		query.setParameter("teamName", teamName);
 		return query.getResultList();
@@ -97,7 +97,7 @@ public class AbcDAOImpl implements AbcDAO {
 	public List<Message> getMessages() throws SQLException {
 		TypedQuery<Message> query = entityManager
 				.createQuery(
-						"SELECT message FROM Message message WHERE message.sender='beneesfradia' ORDER BY message.messageDate DESC",
+						"SELECT message FROM Message message WHERE message.sender='BeneesFradia' ORDER BY message.messageDate DESC",
 						Message.class);
 		return query.getResultList();
 	}
