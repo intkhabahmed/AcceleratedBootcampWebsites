@@ -1,0 +1,49 @@
+package com.cg.abc.entity;
+
+import java.sql.Date;
+
+public class Query {
+	private int messageId;
+	private String receiver;
+	private String query;
+	private String sender;
+	private Date messageDate;
+
+	public Query() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
+	}
+
+	public String getQuery() {
+		return query;
+	}
+
+	public void setQuery(String query) {
+		this.query = query;
+	}
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
+	public Date getMessageDate() {
+		return messageDate;
+	}
+
+	public void setMessageDate(Date messageDate) {
+		this.messageDate = messageDate;
+	}
+
+}

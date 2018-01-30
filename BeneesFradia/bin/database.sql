@@ -1,0 +1,78 @@
+Drop table ABC_USERS
+/
+Drop table Proposals
+/
+Drop table Messages
+/
+Drop table Queries
+/
+Drop SEQUENCE proposalid_sequence
+/
+Drop SEQUENCE messageid_sequence
+/
+Drop SEQUENCE queryid_sequence
+/
+
+Create table ABC_USERS( 
+Username Varchar2(20)  primary key Not Null,
+Password Varchar2(20)  Not Null, 
+TeamName Varchar2(20)  Not Null,
+MobileNumber Varchar2(10)
+)
+/
+
+Create table Proposals ( 
+proposalid Number(6) primary key, 
+filename Varchar2(20) not null,
+fileData blob,
+companyname Varchar2(20),
+teamname Varchar2(20),
+proposaldate Date
+)
+/
+
+Create table Queries ( 
+queryid Number(6) primary key, 
+sender Varchar2(20) not null,
+receiver Varchar2(20) not null,
+query Varchar2(100) not null,
+reply Varchar2(200) ,
+queryDate Date
+)
+/
+
+Create table Messages ( 
+messageid Number(6) primary key, 
+sender Varchar2(20) not null,
+receiver Varchar2(20) not null,
+message Varchar2(100) not null,
+messageDate Date
+)
+/
+
+Create sequence proposalid_sequence start with 1
+/
+
+Create sequence queryid_sequence start with 1
+/
+
+Create sequence messageid_sequence start with 1
+/
+
+INSERT INTO ABC_USERS VALUES('beneesfradia', 'beneesfradia', 'beneesfradia', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('benefitscards', 'benefitscards', 'benefitscards', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('borasys', 'borasys', 'borasys', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('financialexpert', 'financialexpert', 'financialexpert', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('quickgunheadley', 'quickgunheadley', 'quickgunheadley', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('silvertax', 'silvertax', 'silvertax', '9876543210')
+/
+INSERT INTO ABC_USERS VALUES('unipro', 'unipro', 'unipro', '9876543210')
+/
+
+commit
+/

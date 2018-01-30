@@ -1,0 +1,5 @@
+package com.cg.abc.entity;
+
+public class Query {
+
+}

@@ -1,0 +1,52 @@
+$(function(){
+	$("nav a").click(function(){
+		$('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, 1500);
+    return false;
+	});
+	
+	$("nav a").click(function(){
+		$("nav li").removeClass("active");
+		$(this).parent().addClass("active");
+	});
+	
+
+	$(".overlay").on('click', function(){
+		$(this).fadeOut();
+		$("#loginWindow").fadeOut();
+		$("#uploadWindow").fadeOut();
+	});
+
+	$("#uploadForm, #uploadForm_shortcut").on('click', function(){
+		$(".overlay").fadeIn();
+		$("#uploadWindow").fadeIn();
+		return false;
+	});
+	
+	$(".carousel-control.left").mouseenter(function(){
+		$("#left-indicator img").attr("src", "images/leftarrow_ro.png");
+	});
+	$(".carousel-control.right").mouseenter(function(){
+		$("#right-indicator img").attr("src", "images/rightarrow_ro.png");
+	});
+	
+	$(".carousel-control.left").mouseleave(function(){
+		$("#left-indicator img").attr("src", "images/leftarrow.png");
+	});
+	$(".carousel-control.right").mouseleave(function(){
+		$("#right-indicator img").attr("src", "images/rightarrow.png");
+	});
+	
+	$("#login_btn img").mouseenter(function(){
+		$(this).attr("src", "images/loginbtn_over.png");
+	});
+	$("#login_btn img").mouseleave(function(){
+		$(this).attr("src", "images/loginbtn_over.png");
+	});
+	
+});
+function showLoginPage(){
+	$(".overlay").fadeIn();
+	$("#loginWindow").fadeIn();
+}

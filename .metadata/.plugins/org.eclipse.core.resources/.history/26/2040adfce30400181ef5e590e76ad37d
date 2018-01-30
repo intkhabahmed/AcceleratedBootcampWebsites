@@ -1,0 +1,96 @@
+package com.cg.abcp.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Repository;
+
+import com.cg.abcp.entity.Message;
+import com.cg.abcp.entity.Proposal;
+import com.cg.abcp.entity.User;
+
+@Repository
+public class AbcpDAOImpl implements AbcpDAO {
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public List<User> validateLogin(String username, String password)
+			throws SQLException {
+		TypedQuery<User> query = entityManager
+				.createQuery(
+						"SELECT user FROM User user WHERE user.username=:username AND user.password=:password",
+						User.class);
+		query.setParameter("username", username);
+		query.setParameter("password", password);
+		return query.getResultList();
+	}
+
+	@Override
+	public Proposal uploadFile(Proposal proposal) throws SQLException {
+		entityManager.persist(proposal);
+		return proposal;
+	}
+
+	@Override
+	public Proposal getFile(int proposalId) {
+		return entityManager.find(Proposal.class, proposalId);
+	}
+
+	@Override
+	public void askQuery(Message message) throws SQLException {
+		entityManager.persist(message);
+	}
+
+	@Override
+	public void replyQuery(int queryId, String reply) throws SQLException {
+		Message message = entityManager.find(Message.class, queryId);
+		message.setReply(reply);
+		entityManager.merge(message);
+	}
+
+	@Override
+	public List<Proposal> getProposals(String teamName) throws SQLException {
+		TypedQuery<Proposal> query = entityManager
+				.createQuery(
+						"SELECT proposal FROM Proposal proposal WHERE proposal.teamName=:teamName ORDER BY proposal.proposalDate DESC",
+						Proposal.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Message> getQueries(String teamName) throws SQLException {
+		TypedQuery<Message> query = entityManager
+				.createQuery(
+						"SELECT message FROM Message message WHERE message.sender=:teamName ORDER BY message.queryDate DESC",
+						Message.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Message> findSameQuery(Message message) throws SQLException {
+		TypedQuery<Message> query = entityManager
+				.createQuery(
+						"SELECT message FROM Message message WHERE message.receiver=:companyName AND message.query=:query AND message.queryDate=:queryDate",
+						Message.class);
+		query.setParameter("companyName", message.getReceiver());
+		query.setParameter("query", message.getQuery());
+		query.setParameter("queryDate", message.getQueryDate());
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Message> getMessages() throws SQLException {
+		TypedQuery<Message> query = entityManager
+				.createQuery(
+						"SELECT message FROM Message message WHERE message.receiver='BeneesFradia' ORDER BY message.queryDate DESC",
+						Message.class);
+		return query.getResultList();
+	}
+}
