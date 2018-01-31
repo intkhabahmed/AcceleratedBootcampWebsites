@@ -1,4 +1,5 @@
-/****************************Common CSS**************************/
+/****************************Common CSS**************************/ 
+
 .padding-10x{
 	padding: 10px;
 }
@@ -19,6 +20,9 @@
 .error {
 	color: red;
 }
+.success {
+	color: #5cb85c;
+}
 #errorBlock{
 	position: absolute;
 	top: 15%;
@@ -37,9 +41,11 @@ body {
     border-radius: 0px;
     top: 110%;
 }
-
+.dropdown-menu li a{
+	color: #ffffff;
+}
 .dropdown-menu li a:hover {
-	color: #049969;
+	color: #8080ff;
 	background: #000000;
 	opacity: 1;
 }
@@ -51,6 +57,12 @@ input, button, .form-control, .btn {
 	border-radius: 0px !important;
 }
 
+input[type=submit]:hover, .btn:hover {
+	color: #333333;
+}
+p {
+    margin: 0 10px;
+}
 /***********************Index Page*********************************/
 hr {
 	border-top: none;
@@ -74,9 +86,6 @@ hr {
 }
 
 @media screen and (min-width: 991px){
-	.dropdown-menu li a{
-		color: #ffffff;
-	}
 	.navbar-custom-fitting {
 		width: 100%;
 	}
@@ -94,7 +103,7 @@ hr {
 		padding-top: 30px;
 	}
 	nav> .container {
-		height: 70px;
+		height: auto;
 	}
 
 	.carousel {
@@ -112,12 +121,16 @@ hr {
 		width: 40vw;
 		left: 30vw;
 	}
+	#queryWindow {
+		width: 30vw;
+		left: 35vw;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 990px){
 	#main-nav {
 		height: 40px;
-		padding-top: 40px;
+		padding-top: 23px;
 		margin-top: 30px;
 	}	
 
@@ -130,7 +143,6 @@ hr {
 	}
 	#login_button {
 		margin-bottom: 2px;
-		margin-left: 5px;
 	}
 	nav> .container {
 		height: 92px;
@@ -154,6 +166,10 @@ hr {
 	#uploadWindow {
 		left: 30vw;
 		width: 40vw;
+	}
+	#queryWindow {
+		width: 40vw;
+		left: 35vw;
 	}
 }
 
@@ -181,7 +197,6 @@ hr {
 	}
 	#login_button {
 		margin: 5px 15px;
-		cursor: pointer;
 	}
 	.carousel {
 		width: 100%;
@@ -196,15 +211,12 @@ hr {
 		max-width: 100%;
 		width: 100%;
 	}
-	#loginWindow {
-		width: 100%;
-	}
-	#uploadWindow {
+	#loginWindow, #uploadWindow, #queryQindow {
 		width: 100%;
 	}
 	#shortcut_links .col-sm-4 img {
 		display: block;
-		margin: 5px auto;
+		margin: 0 auto;
 		width: 100%;
 	}
 	.navbar-toggle {
@@ -212,19 +224,16 @@ hr {
     	margin-right: 45px;
 	}
 }
-
 .navbar-nav {
 	font-size: 26px !important;
 }
-
 #login_button {
 	cursor: pointer;
 	margin-left: 5px;
 }
-
 .navbar-nav> .active a {
-	border-bottom: 2px solid #049969 ;
-	color: #049969 !important;
+	border-bottom: 2px solid #373f7c ;
+	color: #373f7c !important;
 	background-color: transparent !important; 
 }
 
@@ -242,7 +251,6 @@ hr {
 
 .contact-form-fields input {
 	margin: 3px 0;
-	
 }
 
 .navbar-nav a{
@@ -273,18 +281,15 @@ hr {
 }
 
 /***********************Footer******************************************/
-/*#footer{
-	padding: 5px;
+#footer {
+	background: #282727;
+	color: #c7c7c7;
 	width: 100%;
-	background: #000;
-	color: #fff;
-	position: fixed;
-	bottom: 0;
-	min-height: 60px;
-}*/
+	padding: 15px;
+}
 
-#footer footer{
-	margin-top: 30px;
+#footerSpace{
+	margin-top: 65px;
 }
 
 /***********************Error Page*********************************/
@@ -307,31 +312,21 @@ hr {
 	z-index: 1031;
 	cursor: pointer;
 }
-#loginWindow {
+#loginWindow, #uploadWindow, #queryWindow {
 	position: fixed;
 	top: 25vh;
 	z-index: 1032;
 	opacity: 1;
 	display: none;
 	color: #ffffff;
-	background-color: #049969;
+	background-color: #373f7c;
 	padding: 10px;
 }
 #loginWindow a {
-	color: #262525;
+	color: #eeeeee;
 }
 
-#uploadWindow {
-	position: fixed;
-	top: 25vh;
-	z-index: 1032;
-	opacity: 1;
-	display: none;
-	color: #ffffff;
-	background-color: #049969;
-	padding: 10px;
-}
-#login_form input, #upload_form input, #queryReply_form input{
+#login_form input, #upload_form input, #query_form input{
 	margin: 10px 0;
 
 }
@@ -348,18 +343,16 @@ textarea {
 
 #aboutus {
 	padding: 10px;
-	color: #262525;
+	
 }
-
-#aboutus h2{
-	color: #049969;
+#aboutus h2 {
+	color: #373f7c;
 }
 .carousel-control {
 	top: 50%;
 }
 .carousel-control.left, .carousel-control.right {
 	background-image: none;
-	height: 10px
 } 
 
 #downarrow {
@@ -370,62 +363,27 @@ textarea {
 }
 
 
-#contactus {
-	background: url('../images/contactbg.png');
-	color: #ffffff;
-	width: 100%;
-	padding: 10px;
-}
-#contactus form select, #contactus form textarea{
-	background: transparent;
-	color: #ffffff;
-}
-select option {
-	background: transparent;
-	color: #333333;
-}
-#contactus form .form-control {
-	border-color: #919191;
-	border-radius: 0px;
-}
-#contactus form select {
-	margin: 5px 0;
-}
-#sendMail_btn {
-	background: #049969 !important;
-	font-size: 26px;
-	padding-top: 0px;
-	color: #000000 !important;
-	border: 0px;
-}
-
-#login_btn, #uploadSubmit_btn, input[type=submit], .btn {
-	font-size: 26px;
-	padding-top: 0px;
-	color: #000000 !important;
-	border: 0px;
-}
-
-#sendMail_btn:hover {
-	color: #ffffff !important;
-}
-
-#login_btn:hover, #uploadSubmit_btn:hover, input[type=submit]:hover, .btn:hover {
-	color: #ffffff !important;
-}
-.contactus_body {
-	height: 298px;
-}	
-.img-container {
-	overflow: hidden;
-    line-height: 1.42857143;
-    background-color: #fff;
-    max-width: 324px;
-}
-
 #profile_logo_container {
 	box-shadow: 0px 1px 11px 0px #d2d2d2;
 	padding: 5px;
 	width: 100%;
 }
-	
+#login_btn, #querySubmit_btn {
+	background: #ffffff;
+}
+#login_btn:hover, #querySubmit_btn:hover {
+	color: #373f7c;
+}
+input[type=submit], .btn {
+	font-size: 26px;
+	padding-top: 0px;
+	border: 0px;
+	background: #373f7c;
+}
+input[type=submit]:active, .btn:active {
+	background: #373f7c !important;
+}
+input[type=submit]:hover, .btn:hover {
+	background: #373f7c;
+	color: #eeeeee;
+}

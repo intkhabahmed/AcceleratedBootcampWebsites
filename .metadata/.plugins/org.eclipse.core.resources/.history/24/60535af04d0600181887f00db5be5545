@@ -223,8 +223,8 @@ hr {
 }
 
 .navbar-nav> .active a {
-	border-bottom: 2px solid #049969 ;
-	color: #049969 !important;
+	border-bottom: 2px solid #00b1d7 ;
+	color: #3399cc !important;
 	background-color: transparent !important; 
 }
 
@@ -314,7 +314,7 @@ hr {
 	opacity: 1;
 	display: none;
 	color: #ffffff;
-	background-color: #049969;
+	background-color: #00b1d7;
 	padding: 10px;
 }
 #loginWindow a {
@@ -328,7 +328,7 @@ hr {
 	opacity: 1;
 	display: none;
 	color: #ffffff;
-	background-color: #049969;
+	background-color: #00b1d7;
 	padding: 10px;
 }
 #login_form input, #upload_form input, #queryReply_form input{
@@ -352,7 +352,7 @@ textarea {
 }
 
 #aboutus h2{
-	color: #049969;
+	color: #3399cc;
 }
 .carousel-control {
 	top: 50%;
@@ -392,7 +392,7 @@ select option {
 	margin: 5px 0;
 }
 #sendMail_btn {
-	background: #049969 !important;
+	background: #00b1d7 !important;
 	font-size: 26px;
 	padding-top: 0px;
 	color: #000000 !important;
