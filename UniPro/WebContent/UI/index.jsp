@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Uni-Pro</title>
+<title>Uni-Pro</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -44,11 +44,10 @@
 					technology company with headquarters in Redmond, Washington. It
 					develops, manufactures, licenses, supports and sells computer
 					software, consumer electronics, personal computers, and services.
-					Its best known software products are the Uni-pro Windows line of
+					Our best-known software products are the Uni-pro Windows line of
 					operating systems, the Uni-pro Office suite, and the Internet
-					Explorer and Edge web browsers. Its flagship hardware products are
-					the Xbox video game consoles and the Uni-pro Surface tablet lineup.
-				</p>
+					Explorer and Edge web browsers. Our flagship hardware products are
+					the Xbox video game consoles and the Uni-pro Surface tablet lineup.	</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -57,8 +56,7 @@
 	<!--end container-->
 	<div id="footer">
 		<footer>
-			<p align="center">&copy; Uni-Pro 2018, All Rights
-				Reserved</p>
+			<p align="center">&copy; Uni-Pro 2018, All Rights Reserved</p>
 		</footer>
 	</div>
 	<div class="overlay" title="click to close"></div>
@@ -74,8 +72,10 @@
 
 			</div>
 			<div class="form-group">
-				<h4><a href="#" class="pull-left">Forgot Password?</a></h4> <input
-					type="submit" name="login_btn" id="login_btn" value="Login"
+				<h4>
+					<a href="#" class="pull-left">Forgot Password?</a>
+				</h4>
+				<input type="submit" name="login_btn" id="login_btn" value="Login"
 					class="pull-right btn btn-default" />
 			</div>
 		</form>
@@ -87,8 +87,9 @@
 			<div class="form-group">
 				<label class="form-label" for="receiver">Choose Company</label> <br>
 				<input type="radio" name="receiver" required="required"
-					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp;
-				<input type="radio" name="receiver" value="QuickgunHeadley"/> QuickgunHeadley <br>
+					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp; <input
+					type="radio" name="receiver" value="QuickgunHeadley" />
+				QuickgunHeadley <br>
 			</div>
 			<div class="form-group">
 				<textarea rows="4" class="form-control"

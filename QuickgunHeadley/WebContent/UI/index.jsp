@@ -79,10 +79,10 @@
 				<h2 align="center">About Us</h2>
 				<p align="center">QuickGun Headley (QH) is a leading global
 					financial services firm providing investment banking, securities,
-					wealth management and investment management services. It is
+					wealth management and investment management services. We are
 					headquartered at 1349 Murugan Street in Mexico City. With offices
-					in more than 42 countries and more than 25,000 employees, the
-					firm's clients include corporations, governments, institutions and
+					in more than 42 countries and more than 25,000 employees, our
+					clients include corporations, governments, institutions and
 					individuals.</p>
 			</div>
 			<!--end aboutus-->
@@ -124,7 +124,8 @@
 		<div id="footer">
 			<br>
 			<footer>
-				<p align="center">&copy; Quickgun Headley 2018, All Rights Reserved</p>
+				<p align="center">&copy; Quickgun Headley 2018, All Rights
+					Reserved</p>
 			</footer>
 		</div>
 	</div>
@@ -142,8 +143,10 @@
 
 			</div>
 			<div class="form-group">
-				<h4><a href="#" class="pull-left">Forgot Password?</a></h4> <input
-					type="submit" name="login_btn" id="login_btn" value="Login"
+				<h4>
+					<a href="#" class="pull-left">Forgot Password?</a>
+				</h4>
+				<input type="submit" name="login_btn" id="login_btn" value="Login"
 					class="pull-right btn btn-default" />
 			</div>
 		</form>

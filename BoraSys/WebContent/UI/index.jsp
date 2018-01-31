@@ -40,11 +40,12 @@
 		<div class="row">
 			<div id="aboutus">
 				<h2 align="center">About Us</h2>
-				<p align="center">It is one of the "Big Four" accounting firms
+				<p align="center">We are one of the "Big Four" accounting firms
 					and the largest professional services network in the world by
-					revenue and number of professionals. Bora-sys provides audit,
-					tax, consulting, enterprise risk and financial advisory services
-					with more than 263,900 professionals globally.</p>
+					revenue and number of professionals.</p>
+				<p align="center">Bora-sys provides audit, tax, consulting,
+					enterprise risk and financial advisory services with more than
+					263,900 professionals globally.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -53,8 +54,7 @@
 	<!--end container-->
 	<div id="footer">
 		<footer>
-			<p align="center">&copy; Bora-Sys 2018, All Rights
-				Reserved</p>
+			<p align="center">&copy; Bora-Sys 2018, All Rights Reserved</p>
 		</footer>
 	</div>
 	<div class="overlay" title="click to close"></div>
@@ -70,8 +70,10 @@
 
 			</div>
 			<div class="form-group">
-				<h4><a href="#" class="pull-left">Forgot Password?</a></h4> <input
-					type="submit" name="login_btn" id="login_btn" value="Login"
+				<h4>
+					<a href="#" class="pull-left">Forgot Password?</a>
+				</h4>
+				<input type="submit" name="login_btn" id="login_btn" value="Login"
 					class="pull-right btn btn-default" />
 			</div>
 		</form>
@@ -83,8 +85,9 @@
 			<div class="form-group">
 				<label class="form-label" for="receiver">Choose Company</label> <br>
 				<input type="radio" name="receiver" required="required"
-					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp;
-				<input type="radio" name="receiver" value="QuickgunHeadley"/> QuickgunHeadley <br>
+					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp; <input
+					type="radio" name="receiver" value="QuickgunHeadley" />
+				QuickgunHeadley <br>
 			</div>
 			<div class="form-group">
 				<textarea rows="4" class="form-control"

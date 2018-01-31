@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Benefits Cards</title>
+<title>Bora-Sys</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -40,9 +40,9 @@
 		<div class="row">
 			<div id="aboutus">
 				<h2 align="center">About Us</h2>
-				<p align="center">A leading IT services company in India. We are
-					the world's 9th largest IT services provider by revenue. As of
-					December 2015, we are ranked 10th on the Fortune India 500 list.</p>
+				<p align="center">We are one of the "Big Four" accounting firms
+					and the largest professional services network in the world by
+					revenue and number of professionals.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -51,7 +51,7 @@
 	<!--end container-->
 	<div id="footer">
 		<footer>
-			<p align="center">&copy; Benefits Cards 2018, All Rights Reserved</p>
+			<p align="center">&copy; Bora-Sys 2018, All Rights Reserved</p>
 		</footer>
 	</div>
 	<div class="overlay" title="click to close"></div>

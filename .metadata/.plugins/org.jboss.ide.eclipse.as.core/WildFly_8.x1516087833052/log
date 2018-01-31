@@ -3762,3 +3762,15 @@ Caused by: java.net.ConnectException: JBAS012144: Could not connect to http-remo
 
 !ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2018-01-31 11:55:07.422
 !MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.wtp.core 1 16973825 2018-01-31 12:11:12.659
+!MESSAGE Server processes have been terminated.
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 0 2018-01-31 12:11:19.663
+!MESSAGE The server "WildFly 8.x" requires a JDK to run properly. The VM used to launch this server is not recognized as a valid JDK. C:\Program Files (x86)\Java\jre1.8.0_25 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2018-01-31 12:11:20.728
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2018-01-31 12:11:23.132
+!MESSAGE Server Startup Succeeded

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>BeneesFradia</title>
+<title>Quickgun Headley</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -77,10 +77,13 @@
 		<div class="row">
 			<div id="aboutus">
 				<h2 align="center">About Us</h2>
-				<p align="center">Beneesfradia is one of many financial services
-					consortiums around the world who are tasked with introducing
-					solutions, platforms and products to fast track UFA2020.
-					Beneesfradia is looking at addressing the underserved populations.</p>
+				<p align="center">QuickGun Headley (QH) is a leading global
+					financial services firm providing investment banking, securities,
+					wealth management and investment management services. It is
+					headquartered at 1349 Murugan Street in Mexico City. With offices
+					in more than 42 countries and more than 25,000 employees, the
+					firm's clients include corporations, governments, institutions and
+					individuals.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -89,7 +92,7 @@
 	</div>
 	<!--end container-->
 	<div id="contactus">
-		<c:if test="${sessionScope.user.username eq 'beneesfradia'}">
+		<c:if test="${sessionScope.user.username eq 'quickgunheadley'}">
 			<div class="contactus_body">
 				<h2 align="center">Message</h2>
 				<br>
@@ -121,7 +124,7 @@
 		<div id="footer">
 			<br>
 			<footer>
-				<p align="center">&copy; BeneesFradia 2018, All Rights Reserved</p>
+				<p align="center">&copy; Quickgun Headley 2018, All Rights Reserved</p>
 			</footer>
 		</div>
 	</div>

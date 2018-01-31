@@ -68,8 +68,10 @@
 
 			</div>
 			<div class="form-group">
-				<h4><a href="#" class="pull-left">Forgot Password?</a></h4> <input
-					type="submit" name="login_btn" id="login_btn" value="Login"
+				<h4>
+					<a href="#" class="pull-left">Forgot Password?</a>
+				</h4>
+				<input type="submit" name="login_btn" id="login_btn" value="Login"
 					class="pull-right btn btn-default" />
 			</div>
 		</form>
@@ -81,8 +83,9 @@
 			<div class="form-group">
 				<label class="form-label" for="receiver">Choose Company</label> <br>
 				<input type="radio" name="receiver" required="required"
-					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp;
-				<input type="radio" name="receiver" value="QuickgunHeadley"/> QuickgunHeadley <br>
+					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp; <input
+					type="radio" name="receiver" value="QuickgunHeadley" />
+				QuickgunHeadley <br>
 			</div>
 			<div class="form-group">
 				<textarea rows="4" class="form-control"
