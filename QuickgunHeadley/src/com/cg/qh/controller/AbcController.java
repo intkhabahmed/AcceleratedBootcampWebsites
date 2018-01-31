@@ -49,11 +49,12 @@ public class AbcController {
 			model.addAttribute("user", user);
 		} catch (UserNotFoundException userNotFound) {
 			model.addAttribute("errorMessage", userNotFound.getMessage());
+			returnValue = "index";
 		} catch (ServiceDownException serviceDown) {
 			model.addAttribute("errorMessage", serviceDown.getMessage());
 			returnValue = "error";
-		} catch (Exception serviceDown) {
-			model.addAttribute("errorMessage", serviceDown.getMessage());
+		} catch (Exception exception) {
+			model.addAttribute("errorMessage", exception.getMessage());
 			returnValue = "error";
 		}
 		return returnValue;
