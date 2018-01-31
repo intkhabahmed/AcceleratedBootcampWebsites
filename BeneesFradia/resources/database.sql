@@ -50,13 +50,13 @@ messageDate Date
 )
 /
 
-Create sequence proposalid_sequence start with 1
+Create sequence proposalid_sequence start with 1 increment by 1
 /
 
-Create sequence queryid_sequence start with 1
+Create sequence queryid_sequence start with 1 increment by 1
 /
 
-Create sequence messageid_sequence start with 1
+Create sequence messageid_sequence start with 1 increment by 1
 /
 
 INSERT INTO ABC_USERS VALUES('beneesfradia', 'beneesfradia', 'BeneesFradia', '9876543210')
