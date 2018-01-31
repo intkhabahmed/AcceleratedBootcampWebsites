@@ -18,7 +18,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right" id="main-nav">
 	        <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
-	        <li><a href="#aboutus">AboutUs</a></li>
+	        <li><a href="#aboutus">About Us</a></li>
 	        <c:if test="${sessionScope.user.username ne 'beneesfradia'}">
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proposals <span class="fa fa-angle-down"></span></a>
@@ -38,10 +38,10 @@
 	      	</c:if>
 	      	<c:if test="${sessionScope.user.username ne null}">
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${sessionScope.user.username } <span class="fa fa-angle-down"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${sessionScope.user.teamName } <span class="fa fa-angle-down"></span></a>
 	          <ul class="dropdown-menu">
 	            <c:if test="${sessionScope.user.username eq 'beneesfradia'}">
-	            	<li><a href="showProfile.html">View Profile</a></li>
+	            	<li><a href="showProfile.html">Dashboard</a></li>
 	            </c:if>
 	            <li><a href="logout.html">Logout</a></li>
 	          </ul>
