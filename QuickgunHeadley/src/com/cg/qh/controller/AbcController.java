@@ -80,7 +80,7 @@ public class AbcController {
 			if (null == proposal) {
 				proposalFile.setTeamName(((User) session.getAttribute("user"))
 						.getTeamName());
-				proposalFile.setCompanyName("BeneesFradia");
+				proposalFile.setCompanyName("QuickgunHeadley");
 				proposalFile.setFileName(file.getOriginalFilename());
 				proposalFile.setProposalDate(Date.valueOf(LocalDate.now()));
 				proposalFile.setFile(bytes);

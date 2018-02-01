@@ -65,7 +65,7 @@ public class AbcController {
 		if (!status.isComplete()) {
 			status.setComplete();
 		}
-		return "redirect:index";
+		return "redirect:index.html";
 	}
 
 	@RequestMapping(value = "/uploadFile.html", method = RequestMethod.POST)
