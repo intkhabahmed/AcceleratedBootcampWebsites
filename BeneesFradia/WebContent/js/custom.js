@@ -66,6 +66,10 @@ $(function(){
 		$(this).css("transition", "all .5s ease-in");
 	});
 	
+	$("#forgotPass").click(function(){
+		alert("Please Contact Support Team");
+	});
+	
 });
 function showLoginPage(){
 	$(".overlay").fadeIn();

@@ -143,7 +143,7 @@
 
 			</div>
 			<div class="form-group">
-				<h4>
+				<h4 id="forgotPass">
 					<a href="#" class="pull-left">Forgot Password?</a>
 				</h4>
 				<input type="submit" name="login_btn" id="login_btn" value="Login"

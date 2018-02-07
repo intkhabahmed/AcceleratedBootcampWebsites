@@ -62,6 +62,10 @@ $(function(){
 		$(this).attr("src", "images/loginbtn.png");
 	});
 	
+	$("#forgotPass").click(function(){
+		alert("Please Contact Support Team");
+	});
+	
 });
 function showLoginPage(){
 	$(".overlay").fadeIn();
