@@ -350,8 +350,12 @@ textarea {
 	padding: 10px;
 	color: #262525;
 }
+.client_desc {
+	border: 2px solid #eeeeee;
+	padding: 10px;
+}
 
-#aboutus h2{
+#aboutus h2, .client_desc h3{
 	color: #3399cc;
 }
 .carousel-control {

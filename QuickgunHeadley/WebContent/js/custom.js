@@ -1,7 +1,7 @@
 $(function(){
 	$("nav a").click(function(){
 		$('html, body').animate({
-        scrollTop: $(this.hash).offset().top
+        scrollTop: $(this.hash).offset().top - 120
     }, 1500);
     return false;
 	});

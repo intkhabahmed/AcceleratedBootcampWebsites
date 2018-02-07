@@ -85,7 +85,52 @@
 			<!--end aboutus-->
 		</div>
 		<hr>
-
+		<div class="row" id="client_info">
+			<div class="col-sm-4 ">
+				<div class="img-container">
+					<img src="images/download.png" alt="Download Problem"
+						class="img img-responsive">
+				</div>
+				<div class="client_desc">
+					<h3>Client Name</h3>
+					<h4>Designation</h4>
+					<p>Beneesfradia is one of many financial services
+					consortiums around the world who are tasked with introducing
+					solutions, platforms and products to fast track UFA2020.
+					Beneesfradia is looking at addressing the underserved populations.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-container">
+					<img src="images/upload.png" alt="Upload proposal"
+						class="img img-responsive">
+				</div>
+				<div class="client_desc">
+					<h3>Client Name</h3>
+					<h4>Designation</h4>
+					<p>Beneesfradia is one of many financial services
+					consortiums around the world who are tasked with introducing
+					solutions, platforms and products to fast track UFA2020.
+					Beneesfradia is looking at addressing the underserved populations.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-container">
+					<img src="images/contact.png"
+						alt="ContactUs" class="img img-responsive">
+				</div>
+				<div class="client_desc">
+					<h3>Client Name</h3>
+					<h4>Designation</h4>
+					<p>Beneesfradia is one of many financial services
+					consortiums around the world who are tasked with introducing
+					solutions, platforms and products to fast track UFA2020.
+					Beneesfradia is looking at addressing the underserved populations.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+	
 	</div>
 	<!--end container-->
 	<div id="contactus">

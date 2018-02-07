@@ -351,9 +351,15 @@ textarea {
 	color: #262525;
 }
 
-#aboutus h2{
+#aboutus h2, .client_desc h3{
 	color: #049969;
 }
+
+.client_desc {
+	border: 2px solid #eeeeee;
+	padding: 10px;
+}
+
 .carousel-control {
 	top: 50%;
 }

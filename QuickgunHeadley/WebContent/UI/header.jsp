@@ -19,7 +19,7 @@
 	      <ul class="nav navbar-nav navbar-right" id="main-nav">
 	        <li class="active"><a href="#home">Home <span class="sr-only">(current)</span></a></li>
 	        <li><a href="#aboutus">About Us</a></li>
-	        <c:if test="${sessionScope.user.username ne 'quickgunheadley'}">
+	        <%-- <c:if test="${sessionScope.user.username ne 'quickgunheadley'}">
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Proposals <span class="fa fa-angle-down"></span></a>
 	          <ul class="dropdown-menu">
@@ -29,7 +29,7 @@
 	            <li><a href="data/sampleProposal.pdf" target="_blank">Download Problem Statement</a></li>
 	          </ul>
 	         </li>
-	         </c:if>
+	         </c:if> --%>
 	        <c:if test="${sessionScope.user.username eq 'quickgunheadley'}">
 	        	<li><a href="#contactus">Message</a></li>
 	        </c:if>
