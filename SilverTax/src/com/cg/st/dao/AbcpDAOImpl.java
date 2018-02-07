@@ -95,4 +95,20 @@ public class AbcpDAOImpl implements AbcpDAO {
 		query.setParameter("teamName", teamName);
 		return query.getResultList();
 	}
+
+	@Override
+	public List<Proposal> getProposal(String teamName) throws SQLException {
+		TypedQuery<Proposal> query = entityManager
+				.createQuery(
+						"SELECT proposal FROM Proposal proposal WHERE  proposal.teamName=:teamName",
+						Proposal.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public void updateProposal(Proposal proposalFile) throws SQLException {
+		entityManager.merge(proposalFile);
+
+	}
 }

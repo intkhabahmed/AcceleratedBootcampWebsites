@@ -101,6 +101,26 @@
 			</div>
 		</form>
 	</div>
+	
+	<div id="uploadWindow">
+		<h2 align="center">Upload Proposal</h2>
+		<form class="form-vertical" method="post" action="#" id="upload_form"
+			enctype="multipart/form-data">
+			<div class="form-group">
+				<label class="form-label" for="receiver">Choose Company</label> <br>
+				<input type="radio" name="receiver" required="required"
+					value="BeneesFradia" /> BeneesFradia &nbsp;&nbsp; <input
+					type="radio" name="receiver" value="QuickgunHeadley" />
+				QuickgunHeadley <br>
+			</div>
+			<div class="form-group">
+				<input type="file" name="propsalFile" id="fileInput"
+					required="required" class="pull-left" /> <input type="submit"
+					name="propsalSubmit_btn" value="Upload"
+					class="btn btn-default pull-right" id="proposalSubmit_btn" />
+			</div>
+		</form>
+	</div>
 
 	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

@@ -23,6 +23,7 @@
 	        <li id="login_button" onclick="showLoginPage()"><img src="images/loginbtn.png" class="img img-responsive"/></li>    
 	      	</c:if>
 	      	<c:if test="${sessionScope.user.username ne null}">
+	      	<li id="uploadForm"><a href="#">Upload Proposal</a></li>
 	      	<li id="raiseQuery_btn"><a href="#">Support</a></li>
 	        <li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">${sessionScope.user.teamName } <span class="fa fa-angle-down"></span></a>

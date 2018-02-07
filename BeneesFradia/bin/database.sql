@@ -23,7 +23,7 @@ MobileNumber Varchar2(10)
 
 Create table Proposals ( 
 proposalid Number(6) primary key, 
-filename Varchar2(20) not null,
+filename Varchar2(50) not null,
 fileData blob,
 companyname Varchar2(20),
 teamname Varchar2(20),

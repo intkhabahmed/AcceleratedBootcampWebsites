@@ -139,4 +139,31 @@ public class AbcpServicesImpl implements AbcpServices {
 					"Service unavailable right now, Try Again Later!");
 		}
 	}
+
+	@Override
+	public void updateProposal(Proposal proposalFile)
+			throws ServiceDownException {
+		try {
+			abcpDAO.updateProposal(proposalFile);
+		} catch (SQLException e) {
+			throw new ServiceDownException(
+					"Service unavailable right now, Try Again Later!");
+		}
+	}
+
+	@Override
+	public Proposal getProposal(String teamName) throws ServiceDownException {
+		List<Proposal> proposals;
+		try {
+			proposals = abcpDAO.getProposal(teamName);
+			if (proposals.size() == 0) {
+				return null;
+			}
+
+		} catch (SQLException e) {
+			throw new ServiceDownException(
+					"Service unavailble! Try Again Later");
+		}
+		return proposals.get(0);
+	}
 }

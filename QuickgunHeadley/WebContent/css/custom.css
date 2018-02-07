@@ -411,7 +411,7 @@ select option {
 }
 
 #login_btn:hover, #uploadSubmit_btn:hover, input[type=submit]:hover, .btn:hover {
-	color: #ffffff !important;
+	color: #049969 !important;
 }
 .contactus_body {
 	height: 298px;

@@ -31,4 +31,8 @@ public interface AbcpServices {
 
 	List<Message> getMessages(String teamName) throws ServiceDownException;
 
+	void updateProposal(Proposal proposalFile) throws ServiceDownException;
+
+	Proposal getProposal(String teamName) throws ServiceDownException;
+
 }

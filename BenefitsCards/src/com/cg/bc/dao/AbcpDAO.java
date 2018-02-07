@@ -28,4 +28,8 @@ public interface AbcpDAO {
 
 	List<Message> getMessages(String teamName) throws SQLException;
 
+	void updateProposal(Proposal proposalFile) throws SQLException;
+
+	List<Proposal> getProposal(String teamName) throws SQLException;
+
 }

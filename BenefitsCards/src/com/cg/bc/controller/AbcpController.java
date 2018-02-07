@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.cg.bc.entity.Proposal;
 import com.cg.bc.entity.Query;
@@ -64,6 +65,42 @@ public class AbcpController {
 			status.setComplete();
 		}
 		return "redirect:index.html";
+	}
+
+	@RequestMapping(value = "/uploadFile.html", method = RequestMethod.POST)
+	public String uploadProposal(
+			@RequestParam("propsalFile") CommonsMultipartFile file,
+			@RequestParam("receiver") String companyName, HttpSession session,
+			Model model) throws Exception {
+		if (null != session.getAttribute("user")) {
+			byte[] bytes = file.getBytes();
+			Proposal proposal = abcpServices.getProposal(((User) session
+					.getAttribute("user")).getTeamName());
+			Proposal proposalFile = new Proposal();
+			if (null == proposal) {
+				proposalFile.setTeamName(((User) session.getAttribute("user"))
+						.getTeamName());
+				proposalFile.setCompanyName(companyName);
+				proposalFile.setFileName(file.getOriginalFilename());
+				proposalFile.setProposalDate(Date.valueOf(LocalDate.now()));
+				proposalFile.setFile(bytes);
+				long fileId = abcpServices.uploadFile(proposalFile);
+				model.addAttribute("successMessage", "File uploaded with id"
+						+ fileId);
+			} else {
+				proposal.setFile(bytes);
+				proposal.setFileName(file.getOriginalFilename());
+				proposal.setProposalDate(Date.valueOf(LocalDate.now()));
+				abcpServices.updateProposal(proposal);
+				model.addAttribute("successMessage",
+						"Your Proposal File has been updated");
+			}
+
+		} else {
+			model.addAttribute("errorMessage",
+					"You must be logged in to upload proposal");
+		}
+		return "index";
 	}
 
 	@RequestMapping(value = "/downloadProposal.html", method = RequestMethod.GET)

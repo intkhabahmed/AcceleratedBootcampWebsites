@@ -368,10 +368,10 @@ textarea {
 	padding: 5px;
 	width: 100%;
 }
-#login_btn, #querySubmit_btn {
-	background: #ffffff;
+#login_btn, #querySubmit_btn, #proposalSubmit_btn {
+	background: #ffffff !important;
 }
-#login_btn:hover, #querySubmit_btn:hover {
+#login_btn:hover, #querySubmit_btn:hover, #proposalSubmit_btn:hover {
 	color: #373f7c;
 }
 input[type=submit], .btn {
