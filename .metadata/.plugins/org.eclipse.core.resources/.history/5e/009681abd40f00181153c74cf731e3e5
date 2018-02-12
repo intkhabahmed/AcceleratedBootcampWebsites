@@ -1,4 +1,4 @@
-package com.cg.bs.controller;
+package com.cg.bf.controller;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -17,18 +17,19 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import com.cg.bs.entity.Proposal;
-import com.cg.bs.entity.Query;
-import com.cg.bs.entity.User;
-import com.cg.bs.exceptions.ServiceDownException;
-import com.cg.bs.exceptions.UserNotFoundException;
-import com.cg.bs.service.AbcpServices;
+import com.cg.bf.entity.Message;
+import com.cg.bf.entity.Proposal;
+import com.cg.bf.entity.Query;
+import com.cg.bf.entity.User;
+import com.cg.bf.exceptions.ServiceDownException;
+import com.cg.bf.exceptions.UserNotFoundException;
+import com.cg.bf.service.AbcServices;
 
 @Controller
 @SessionAttributes("user")
-public class AbcpController {
+public class AbcController {
 	@Autowired
-	private AbcpServices abcpServices;
+	private AbcServices abcServices;
 
 	@RequestMapping("index.html")
 	public String showHomePage(Model model) {
@@ -40,8 +41,8 @@ public class AbcpController {
 			@RequestParam("password") String password, Model model) {
 		String returnValue = "redirect:index.html";
 		try {
-			User user = abcpServices.ValidateLogin(username, password);
-			if (!user.getUsername().equals("borasys")) {
+			User user = abcServices.ValidateLogin(username, password);
+			if (user.getUsername().equals("quickgunheadley")) {
 				throw new UserNotFoundException(
 						"Username/Password is incorrect");
 			}
@@ -70,28 +71,27 @@ public class AbcpController {
 	@RequestMapping(value = "/uploadFile.html", method = RequestMethod.POST)
 	public String uploadProposal(
 			@RequestParam("propsalFile") CommonsMultipartFile file,
-			@RequestParam("receiver") String companyName, HttpSession session,
-			Model model) throws Exception {
+			HttpSession session, Model model) throws Exception {
 		if (null != session.getAttribute("user")) {
 			byte[] bytes = file.getBytes();
-			Proposal proposal = abcpServices.getProposal(((User) session
+			Proposal proposal = abcServices.getProposal(((User) session
 					.getAttribute("user")).getTeamName());
 			Proposal proposalFile = new Proposal();
 			if (null == proposal) {
 				proposalFile.setTeamName(((User) session.getAttribute("user"))
 						.getTeamName());
-				proposalFile.setCompanyName(companyName);
+				proposalFile.setCompanyName("BeneesFradia");
 				proposalFile.setFileName(file.getOriginalFilename());
 				proposalFile.setProposalDate(Date.valueOf(LocalDate.now()));
 				proposalFile.setFile(bytes);
-				long fileId = abcpServices.uploadFile(proposalFile);
+				long fileId = abcServices.uploadFile(proposalFile);
 				model.addAttribute("successMessage", "File uploaded with id"
 						+ fileId);
 			} else {
 				proposal.setFile(bytes);
 				proposal.setFileName(file.getOriginalFilename());
 				proposal.setProposalDate(Date.valueOf(LocalDate.now()));
-				abcpServices.updateProposal(proposal);
+				abcServices.updateProposal(proposal);
 				model.addAttribute("successMessage",
 						"Your Proposal File has been updated");
 			}
@@ -108,7 +108,7 @@ public class AbcpController {
 			HttpSession session, Model model, HttpServletResponse res)
 			throws Exception {
 		if (null != session.getAttribute("user")) {
-			Proposal proposalFile = abcpServices.getFile(proposalId);
+			Proposal proposalFile = abcServices.getFile(proposalId);
 			ServletOutputStream sos;
 			res.setContentType("application/zip");
 
@@ -127,24 +127,18 @@ public class AbcpController {
 
 	@RequestMapping(value = "/askQuery.html", method = RequestMethod.POST)
 	public String askQuery(@RequestParam("receiver") String receiver,
-			@RequestParam("query") String query, Model model,
+			@RequestParam("query") String queryData, Model model,
 			HttpSession session) {
 		String returnValue = "profile";
-		Query message = new Query();
+		Query query = new Query();
 		try {
-			message.setQuery(query);
-			message.setReceiver(receiver);
-			message.setReply(null);
-			message.setSender(((User) session.getAttribute("user"))
-					.getTeamName());
-			message.setQueryDate(Date.valueOf(LocalDate.now()));
-			if (abcpServices.findSameQuery(message) == false) {
-				abcpServices.askQuery(message);
-				model.addAttribute("successMessage", "Your query has been sent");
-			} else {
-				model.addAttribute("successMessage",
-						"Multiple submission of same query are not allowed");
-			}
+			query.setQuery(queryData);
+			query.setReceiver(receiver);
+			query.setReply(null);
+			query.setSender(((User) session.getAttribute("user")).getTeamName());
+			query.setQueryDate(Date.valueOf(LocalDate.now()));
+			abcServices.askQuery(query);
+			model.addAttribute("successMessage", "Your query has been sent");
 			showProfile(model, session);
 		} catch (ServiceDownException serviceDown) {
 			model.addAttribute("errorMessage", serviceDown.getMessage());
@@ -159,7 +153,7 @@ public class AbcpController {
 			HttpSession session) {
 		String returnValue = "profile";
 		try {
-			abcpServices.replyQuery(queryId, reply);
+			abcServices.replyQuery(queryId, reply);
 			model.addAttribute("successMessage", "Your reply has been sent");
 			showProfile(model, session);
 		} catch (ServiceDownException serviceDown) {
@@ -173,14 +167,10 @@ public class AbcpController {
 	public String showProfile(Model model, HttpSession session) {
 		String returnValue = "profile";
 		if (null != session.getAttribute("user")) {
-			User user = (User) session.getAttribute("user");
 			try {
-				model.addAttribute("proposals",
-						abcpServices.getProposals(user.getTeamName()));
-				model.addAttribute("queries",
-						abcpServices.getQueries(user.getTeamName()));
-				model.addAttribute("messages",
-						abcpServices.getMessages(user.getTeamName()));
+				model.addAttribute("proposals", abcServices.getProposals());
+				model.addAttribute("queries", abcServices.getQueries());
+				model.addAttribute("messages", abcServices.getMessages());
 			} catch (ServiceDownException serviceDown) {
 				model.addAttribute("errorMessage", serviceDown.getMessage());
 				returnValue = "error";
@@ -192,17 +182,36 @@ public class AbcpController {
 		return returnValue;
 	}
 
+	@RequestMapping(value = "/sendMessage.html", method = RequestMethod.POST)
+	public String sendMessage(@RequestParam("teamName") String receiver,
+			@RequestParam("message") String messageData, Model model,
+			HttpSession session) {
+		String returnValue = "index";
+		Message message = new Message();
+		try {
+			message.setMessage(messageData);
+			message.setReceiver(receiver);
+			message.setSender(((User) session.getAttribute("user"))
+					.getTeamName());
+			message.setMessageDate(Date.valueOf(LocalDate.now()));
+			abcServices.sendMessage(message);
+			model.addAttribute("successMessage", "Your message has been sent");
+			showProfile(model, session);
+		} catch (ServiceDownException serviceDown) {
+			model.addAttribute("errorMessage", serviceDown.getMessage());
+			returnValue = "error";
+		}
+		return returnValue;
+	}
+
 	@RequestMapping(value = "/deleteQuery.html")
 	public String deleteQuery(@RequestParam("queryId") int queryId, Model model) {
 		String returnValue = "profile";
 		try {
-			abcpServices.deleteQuery(queryId);
+			abcServices.deleteQuery(queryId);
 			model.addAttribute("successMessage", "Query has been deleted");
 		} catch (ServiceDownException serviceDown) {
 			model.addAttribute("errorMessage", serviceDown.getMessage());
-			returnValue = "error";
-		} catch (Exception exception) {
-			model.addAttribute("errorMessage", exception.getMessage());
 			returnValue = "error";
 		}
 		return returnValue;

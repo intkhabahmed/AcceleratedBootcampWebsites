@@ -1,4 +1,4 @@
-package com.cg.bs.controller;
+package com.cg.up.controller;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import com.cg.bs.entity.Proposal;
-import com.cg.bs.entity.Query;
-import com.cg.bs.entity.User;
-import com.cg.bs.exceptions.ServiceDownException;
-import com.cg.bs.exceptions.UserNotFoundException;
-import com.cg.bs.service.AbcpServices;
+import com.cg.up.entity.Proposal;
+import com.cg.up.entity.Query;
+import com.cg.up.entity.User;
+import com.cg.up.exceptions.ServiceDownException;
+import com.cg.up.exceptions.UserNotFoundException;
+import com.cg.up.service.AbcpServices;
 
 @Controller
 @SessionAttributes("user")
@@ -41,7 +41,7 @@ public class AbcpController {
 		String returnValue = "redirect:index.html";
 		try {
 			User user = abcpServices.ValidateLogin(username, password);
-			if (!user.getUsername().equals("borasys")) {
+			if (!user.getUsername().equals("unipro")) {
 				throw new UserNotFoundException(
 						"Username/Password is incorrect");
 			}
@@ -201,8 +201,8 @@ public class AbcpController {
 		} catch (ServiceDownException serviceDown) {
 			model.addAttribute("errorMessage", serviceDown.getMessage());
 			returnValue = "error";
-		} catch (Exception exception) {
-			model.addAttribute("errorMessage", exception.getMessage());
+		} catch (ServiceDownException serviceDown) {
+			model.addAttribute("errorMessage", serviceDown.getMessage());
 			returnValue = "error";
 		}
 		return returnValue;

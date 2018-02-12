@@ -213,6 +213,9 @@ public class AbcController {
 		} catch (ServiceDownException serviceDown) {
 			model.addAttribute("errorMessage", serviceDown.getMessage());
 			returnValue = "error";
+		} catch (Exception exception) {
+			model.addAttribute("errorMessage", exception.getMessage());
+			returnValue = "error";
 		}
 		return returnValue;
 	}
