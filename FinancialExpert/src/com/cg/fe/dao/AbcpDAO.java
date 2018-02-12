@@ -32,4 +32,6 @@ public interface AbcpDAO {
 
 	void updateProposal(Proposal proposalFile) throws SQLException;
 
+	void deleteQuery(int queryId) throws SQLException;
+
 }

@@ -112,6 +112,10 @@ hr {
 		width: 40vw;
 		left: 30vw;
 	}
+	#confirmWindow {
+		width: 30vw;
+		left: 35vw;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 990px){
@@ -154,6 +158,10 @@ hr {
 	#uploadWindow {
 		left: 30vw;
 		width: 40vw;
+	}
+	#confirmWindow {
+		width: 30vw;
+		left: 35vw;
 	}
 }
 
@@ -200,6 +208,9 @@ hr {
 		width: 100%;
 	}
 	#uploadWindow {
+		width: 100%;
+	}
+	#confirmWindow {
 		width: 100%;
 	}
 	#shortcut_links .col-sm-4 img {
@@ -307,7 +318,7 @@ hr {
 	z-index: 1031;
 	cursor: pointer;
 }
-#loginWindow {
+#loginWindow, #uploadWindow, #confirmWindow {
 	position: fixed;
 	top: 25vh;
 	z-index: 1032;
@@ -321,16 +332,6 @@ hr {
 	color: #262525;
 }
 
-#uploadWindow {
-	position: fixed;
-	top: 25vh;
-	z-index: 1032;
-	opacity: 1;
-	display: none;
-	color: #ffffff;
-	background-color: #00b1d7;
-	padding: 10px;
-}
 #login_form input, #upload_form input, #queryReply_form input{
 	margin: 10px 0;
 
@@ -413,8 +414,11 @@ select option {
 #sendMail_btn:hover {
 	color: #ffffff !important;
 }
+#login_btn, #deleteQuery_btn, #cancel_btn {
+	background: #ffffff !important;
+}
 
-#login_btn:hover, #uploadSubmit_btn:hover, input[type=submit]:hover, .btn:hover {
+#login_btn:hover, #uploadSubmit_btn:hover, input[type=submit]:hover, .btn:hover, #deleteQuery_btn:hover {
 	color: #00b1d7 !important;
 }
 .contactus_body {

@@ -166,4 +166,15 @@ public class AbcpServicesImpl implements AbcpServices {
 		}
 		return proposals.get(0);
 	}
+
+	@Override
+	public void deleteQuery(int queryId) throws ServiceDownException {
+		try {
+			abcpDAO.deleteQuery(queryId);
+		} catch (SQLException sqlException) {
+			throw new ServiceDownException(
+					"Service unavailable right now, Try Again Later!");
+		}
+
+	}
 }

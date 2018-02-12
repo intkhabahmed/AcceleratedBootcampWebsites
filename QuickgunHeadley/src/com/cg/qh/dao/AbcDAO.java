@@ -32,4 +32,6 @@ public interface AbcDAO {
 
 	List<Message> getMessages() throws SQLException;
 
+	void deleteQuery(int queryId) throws SQLException;
+
 }

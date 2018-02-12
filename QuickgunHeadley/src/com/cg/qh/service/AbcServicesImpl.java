@@ -160,4 +160,15 @@ public class AbcServicesImpl implements AbcServices {
 		}
 	}
 
+	@Override
+	public void deleteQuery(int queryId) throws ServiceDownException {
+		try {
+			abcDAO.deleteQuery(queryId);
+		} catch (SQLException sqlException) {
+			throw new ServiceDownException(
+					"Service unavailable right now, Try Again Later!");
+		}
+
+	}
+
 }

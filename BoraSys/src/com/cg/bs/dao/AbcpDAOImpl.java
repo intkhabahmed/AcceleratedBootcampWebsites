@@ -111,4 +111,10 @@ public class AbcpDAOImpl implements AbcpDAO {
 		entityManager.merge(proposalFile);
 
 	}
+
+	@Override
+	public void deleteQuery(int queryId) throws SQLException {
+		Query query = entityManager.find(Query.class, queryId);
+		entityManager.remove(query);
+	}
 }

@@ -203,4 +203,17 @@ public class AbcController {
 		}
 		return returnValue;
 	}
+
+	@RequestMapping(value = "/deleteQuery.html")
+	public String deleteQuery(@RequestParam("queryId") int queryId, Model model) {
+		String returnValue = "profile";
+		try {
+			abcServices.deleteQuery(queryId);
+			model.addAttribute("successMessage", "Query has been deleted");
+		} catch (ServiceDownException serviceDown) {
+			model.addAttribute("errorMessage", serviceDown.getMessage());
+			returnValue = "error";
+		}
+		return returnValue;
+	}
 }

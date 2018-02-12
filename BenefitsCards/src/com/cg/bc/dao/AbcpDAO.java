@@ -32,4 +32,6 @@ public interface AbcpDAO {
 
 	List<Proposal> getProposal(String teamName) throws SQLException;
 
+	void deleteQuery(int queryId) throws SQLException;
+
 }

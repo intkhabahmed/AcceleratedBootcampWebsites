@@ -17,6 +17,7 @@ $(function(){
 		$("#loginWindow").fadeOut();
 		$("#uploadWindow").fadeOut();
 		$("#queryWindow").fadeOut();
+		$("#confirmWindow").fadeOut();
 	});
 
 	$("#uploadForm, #uploadForm_shortcut").on('click', function(){
@@ -64,6 +65,16 @@ $(function(){
 	
 	$("#forgotPass").click(function(){
 		alert("Please Contact Support Team");
+	});
+	
+	$("#delete_btn").click(function(){
+		$(".overlay").fadeIn();
+		$("#confirmWindow").fadeIn();
+	});
+	
+	$("#cancel_btn").click(function(){
+		$(".overlay").fadeOut();
+		$("#confirmWindow").fadeOut();
 	});
 	
 });

@@ -35,4 +35,6 @@ public interface AbcpServices {
 
 	Proposal getProposal(String teamName) throws ServiceDownException;
 
+	void deleteQuery(int queryId) throws ServiceDownException;
+
 }

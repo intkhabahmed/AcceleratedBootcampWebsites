@@ -42,6 +42,7 @@
 				<th>Query Date</th>
 				<th>Answer</th>
 				<th>Status</th>
+				<th>Action</th>
 			</tr>
 			
 			<c:forEach items="${queries}" var="q">
@@ -58,7 +59,15 @@
 						<span class="success">Solved!!</span>
 					</c:if>
 					</td>
+					<td><button id="delete_btn" class="btn btn-info">Delete</button></td>
 				</tr>
+				<div id="confirmWindow">
+					<h3>Are you sure want to delete this query?</h3>
+					<div class="center">
+						<a href="deleteQuery.html?queryId=${q.queryId}" id="deleteQuery_btn" class="btn btn-default">Delete</a>&nbsp;&nbsp;&nbsp;
+						<button id="cancel_btn" class="btn btn-default">Cancel</button>
+					</div>
+				</div>
 			</c:forEach>			
 		</table>
 		</c:if>
@@ -138,10 +147,12 @@
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+
 <c:if test="${successMessage ne null}">
 <%-- 	<div class="alert alert-success" role="alert">"${successMessage}"</div> --%>
 	<script>
 		alert("${successMessage}");
+		window.location = "showProfile.html";
 	</script>
 </c:if>
 </body>

@@ -33,4 +33,6 @@ public interface AbcServices {
 
 	List<Message> getMessages() throws ServiceDownException;
 
+	void deleteQuery(int queryId) throws ServiceDownException;
+
 }

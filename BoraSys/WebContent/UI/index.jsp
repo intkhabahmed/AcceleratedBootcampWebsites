@@ -132,6 +132,7 @@
 		<%-- 	<div class="alert alert-success" role="alert">"${successMessage}"</div> --%>
 		<script>
 			alert("${successMessage}");
+			window.location = "index.html";
 		</script>
 	</c:if>
 </body>

@@ -1,0 +1,114 @@
+package com.cg.up.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Repository;
+
+import com.cg.up.entity.Message;
+import com.cg.up.entity.Proposal;
+import com.cg.up.entity.Query;
+import com.cg.up.entity.User;
+
+@Repository
+public class AbcpDAOImpl implements AbcpDAO {
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Override
+	public List<User> validateLogin(String username, String password)
+			throws SQLException {
+		TypedQuery<User> query = entityManager
+				.createQuery(
+						"SELECT user FROM User user WHERE user.username=:username AND user.password=:password",
+						User.class);
+		query.setParameter("username", username);
+		query.setParameter("password", password);
+		return query.getResultList();
+	}
+
+	@Override
+	public Proposal uploadFile(Proposal proposal) throws SQLException {
+		entityManager.persist(proposal);
+		return proposal;
+	}
+
+	@Override
+	public Proposal getFile(int proposalId) {
+		return entityManager.find(Proposal.class, proposalId);
+	}
+
+	@Override
+	public void askQuery(Query query) throws SQLException {
+		entityManager.persist(query);
+	}
+
+	@Override
+	public void replyQuery(int queryId, String reply) throws SQLException {
+		Query query = entityManager.find(Query.class, queryId);
+		query.setReply(reply);
+		entityManager.merge(query);
+	}
+
+	@Override
+	public List<Proposal> getProposals(String teamName) throws SQLException {
+		TypedQuery<Proposal> query = entityManager
+				.createQuery(
+						"SELECT proposal FROM Proposal proposal WHERE proposal.teamName=:teamName ORDER BY proposal.proposalDate DESC",
+						Proposal.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Query> getQueries(String teamName) throws SQLException {
+		TypedQuery<Query> query = entityManager
+				.createQuery(
+						"SELECT query FROM Query query WHERE query.sender=:teamName ORDER BY query.queryDate DESC",
+						Query.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Query> findSameQuery(Query queryObj) throws SQLException {
+		TypedQuery<Query> query = entityManager
+				.createQuery(
+						"SELECT query FROM Query query WHERE query.receiver=:companyName AND query.query=:query AND query.queryDate=:queryDate",
+						Query.class);
+		query.setParameter("companyName", queryObj.getReceiver());
+		query.setParameter("query", queryObj.getQuery());
+		query.setParameter("queryDate", queryObj.getQueryDate());
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Message> getMessages(String teamName) throws SQLException {
+		TypedQuery<Message> query = entityManager
+				.createQuery(
+						"SELECT message FROM Message message WHERE message.receiver=:teamName ORDER BY message.messageDate DESC",
+						Message.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public List<Proposal> getProposal(String teamName) throws SQLException {
+		TypedQuery<Proposal> query = entityManager
+				.createQuery(
+						"SELECT proposal FROM Proposal proposal WHERE  proposal.teamName=:teamName",
+						Proposal.class);
+		query.setParameter("teamName", teamName);
+		return query.getResultList();
+	}
+
+	@Override
+	public void updateProposal(Proposal proposalFile) throws SQLException {
+		entityManager.merge(proposalFile);
+
+	}
+}

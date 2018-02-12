@@ -125,6 +125,10 @@ hr {
 		width: 30vw;
 		left: 35vw;
 	}
+	#confirmWindow {
+		width: 30vw;
+		left: 35vw;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 990px){
@@ -171,6 +175,10 @@ hr {
 		width: 40vw;
 		left: 35vw;
 	}
+	#confirmWindow {
+		width: 30vw;
+		left: 35vw;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -211,7 +219,7 @@ hr {
 		max-width: 100%;
 		width: 100%;
 	}
-	#loginWindow, #uploadWindow, #queryQindow {
+	#loginWindow, #uploadWindow, #queryQindow, #confirmWindow {
 		width: 100%;
 	}
 	#shortcut_links .col-sm-4 img {
@@ -312,7 +320,7 @@ hr {
 	z-index: 1031;
 	cursor: pointer;
 }
-#loginWindow, #uploadWindow, #queryWindow {
+#loginWindow, #uploadWindow, #queryWindow, #confirmWindow {
 	position: fixed;
 	top: 25vh;
 	z-index: 1032;
@@ -368,10 +376,10 @@ textarea {
 	padding: 5px;
 	width: 100%;
 }
-#login_btn, #querySubmit_btn, #proposalSubmit_btn {
+#login_btn, #querySubmit_btn, #proposalSubmit_btn, #deleteQuery_btn, #cancel_btn {
 	background: #ffffff !important;
 }
-#login_btn:hover, #querySubmit_btn:hover, #proposalSubmit_btn:hover {
+#login_btn:hover, #querySubmit_btn:hover, #proposalSubmit_btn:hover, #deleteQuery_btn:hover, #cancel_btn:hover {
 	color: #ff3366;
 }
 input[type=submit], .btn {

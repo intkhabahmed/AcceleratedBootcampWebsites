@@ -102,4 +102,10 @@ public class AbcDAOImpl implements AbcDAO {
 		return query.getResultList();
 	}
 
+	@Override
+	public void deleteQuery(int queryId) throws SQLException {
+		Query query = entityManager.find(Query.class, queryId);
+		entityManager.remove(query);
+	}
+
 }
