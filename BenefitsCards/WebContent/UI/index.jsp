@@ -43,6 +43,13 @@
 				<p align="center">A leading IT services company in India. We are
 					the world's 9th largest IT services provider by revenue. As of
 					December 2015, we are ranked 10th on the Fortune India 500 list.</p>
+				<p align="center">Benefits Cards deals with management consulting, technology
+					and business process outsourcing services. The company provides
+					managed mobility services to manage mobile devices either as a
+					solution deployment life cycle or as a hosted managed service.
+					Managed mobility services include procurement, deployment, and MDM.
+					Benefits Cards strives to enable enterprises to work with a single
+					provider with a global reach, which helps reduce the complexity.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -94,7 +101,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div id="uploadWindow">
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"

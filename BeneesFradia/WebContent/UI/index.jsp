@@ -81,6 +81,14 @@
 					consortiums around the world who are tasked with introducing
 					solutions, platforms and products to fast track UFA2020.
 					Beneesfradia is looking at addressing the underserved populations.</p>
+				<p align="center">Beneesfradia is geared towards the financial world as it
+					handles more complex transactions and restricts access to
+					transaction data. The aim of Beneesfradia is to provide a platform
+					with common services to ensure that any services built on top are
+					compatible between the network participants, whilst still fostering
+					innovation and faster time to market as the underlying
+					infrastructure would be accepted and understood by at least the
+					founding firms.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -88,49 +96,49 @@
 		<div class="row" id="client_info">
 			<div class="col-sm-4 ">
 				<div class="img-container">
-					<img src="images/download.png" alt="Download Problem"
+					<img src="images/mohan.png" alt="Mohan Murugesan"
+						class="img img-responsive">
+				</div>
+				<div class="client_desc">
+					<h3>Mohan Murugesan</h3>
+					<h4>Vice President - Financial Services</h4>
+					<p>Beneesfradia is one of many financial services consortiums
+						around the world who are tasked with introducing solutions,
+						platforms and products to fast track UFA2020. Beneesfradia is
+						looking at addressing the underserved populations.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-container">
+					<img src="images/gaurav.png" alt="Gaurav Mathur"
+						class="img img-responsive">
+				</div>
+				<div class="client_desc">
+					<h3>Gaurav Mathur</h3>
+					<h4>Senior Director - Financial Services</h4>
+					<p>Beneesfradia is one of many financial services consortiums
+						around the world who are tasked with introducing solutions,
+						platforms and products to fast track UFA2020. Beneesfradia is
+						looking at addressing the underserved populations.</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="img-container">
+					<img src="images/contact.png" alt="ContactUs"
 						class="img img-responsive">
 				</div>
 				<div class="client_desc">
 					<h3>Client Name</h3>
 					<h4>Designation</h4>
-					<p>Beneesfradia is one of many financial services
-					consortiums around the world who are tasked with introducing
-					solutions, platforms and products to fast track UFA2020.
-					Beneesfradia is looking at addressing the underserved populations.</p>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="img-container">
-					<img src="images/upload.png" alt="Upload proposal"
-						class="img img-responsive">
-				</div>
-				<div class="client_desc">
-					<h3>Client Name</h3>
-					<h4>Designation</h4>
-					<p>Beneesfradia is one of many financial services
-					consortiums around the world who are tasked with introducing
-					solutions, platforms and products to fast track UFA2020.
-					Beneesfradia is looking at addressing the underserved populations.</p>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="img-container">
-					<img src="images/contact.png"
-						alt="ContactUs" class="img img-responsive">
-				</div>
-				<div class="client_desc">
-					<h3>Client Name</h3>
-					<h4>Designation</h4>
-					<p>Beneesfradia is one of many financial services
-					consortiums around the world who are tasked with introducing
-					solutions, platforms and products to fast track UFA2020.
-					Beneesfradia is looking at addressing the underserved populations.</p>
+					<p>Beneesfradia is one of many financial services consortiums
+						around the world who are tasked with introducing solutions,
+						platforms and products to fast track UFA2020. Beneesfradia is
+						looking at addressing the underserved populations.</p>
 				</div>
 			</div>
 		</div>
 		<hr>
-	
+
 	</div>
 	<!--end container-->
 	<div id="contactus">
@@ -184,8 +192,10 @@
 
 			</div>
 			<div class="form-group">
-				<h4 id="forgotPass"><a href="#" class="pull-left">Forgot Password?</a></h4> <input
-					type="submit" name="login_btn" id="login_btn" value="Login"
+				<h4 id="forgotPass">
+					<a href="#" class="pull-left">Forgot Password?</a>
+				</h4>
+				<input type="submit" name="login_btn" id="login_btn" value="Login"
 					class="pull-right btn btn-default" />
 			</div>
 		</form>

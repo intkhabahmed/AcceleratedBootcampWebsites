@@ -46,6 +46,15 @@
 				<p align="center">Bora-sys provides audit, tax, consulting,
 					enterprise risk and financial advisory services with more than
 					263,900 professionals globally.</p>
+				<p align="center" >We help top-tier enterprises and government agencies lead in
+					a global marketplace, navigate risks and opportunities, and disrupt
+					the status quo. We encourage clients to embrace complexity and help
+					them to accelerate performance.</p>
+				<p align="center">With profound changes underway in culture, technology,
+					business models, and regulatory frameworks, we work with our
+					clients as they become catalysts for change. And, as the world
+					evolves, so does our work. Year after year, our dynamic teams
+					influence commerce, society and the future.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -97,7 +106,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div id="uploadWindow">
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"

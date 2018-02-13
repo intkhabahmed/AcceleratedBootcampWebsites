@@ -50,6 +50,12 @@
 					needs of Financial services, Medical devices, Life Sciences,
 					Pharmaceutical, Automotive, Software Development and Engineering
 					industries.</p>
+				<p align="center">Silvertax has many brands that commercial and retail
+					consumers may recognize. In addition to consumer home products
+					Silvertax itself produces, the company also licenses its brand name
+					for use in various retail products made by partner manufacturers,
+					such as air conditioners, heaters, fans, security safes, home
+					generators, and paper shredders.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -101,7 +107,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div id="uploadWindow">
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"

@@ -84,6 +84,13 @@
 					in more than 42 countries and more than 25,000 employees, our
 					clients include corporations, governments, institutions and
 					individuals.</p>
+				<p align="center">QuickGun Headley offers high net
+					worth and affluent individuals and corporations around the world a
+					complete range of tailored advice and investment services.</p>
+				<p align="center">Our spectrum ranges from
+					investment management to estate planning and corporate finance
+					advice, in addition to specific wealth management products and
+					services.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -91,12 +98,12 @@
 		<div class="row" id="client_info">
 			<div class="col-sm-4 ">
 				<div class="img-container">
-					<img src="images/download.png" alt="Download Problem"
+					<img src="images/mohan.png" alt="Mohan Murugesan"
 						class="img img-responsive">
 				</div>
 				<div class="client_desc">
-					<h3>Client Name</h3>
-					<h4>Designation</h4>
+					<h3>Mohan Murugesan</h3>
+					<h4>Vice President - Financial Services</h4>
 					<p>Beneesfradia is one of many financial services consortiums
 						around the world who are tasked with introducing solutions,
 						platforms and products to fast track UFA2020. Beneesfradia is
@@ -105,12 +112,12 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="img-container">
-					<img src="images/upload.png" alt="Upload proposal"
-						class="img img-responsive" >
+					<img src="images/gaurav.png" alt="Gaurav Mathur"
+						class="img img-responsive">
 				</div>
 				<div class="client_desc">
-					<h3>Client Name</h3>
-					<h4>Designation</h4>
+					<h3>Gaurav Mathur</h3>
+					<h4>Senior Director - Financial Services</h4>
 					<p>Beneesfradia is one of many financial services consortiums
 						around the world who are tasked with introducing solutions,
 						platforms and products to fast track UFA2020. Beneesfradia is
@@ -119,8 +126,8 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="img-container">
-					<img src="images/contact.png"
-						alt="ContactUs" class="img img-responsive">
+					<img src="images/contact.png" alt="ContactUs"
+						class="img img-responsive">
 				</div>
 				<div class="client_desc">
 					<h3>Client Name</h3>

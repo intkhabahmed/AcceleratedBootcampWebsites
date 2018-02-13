@@ -43,6 +43,16 @@
 				<p align="center">Financial Expert Ltd is an Indian
 					multinational corporation that provides business consulting,
 					information technology and outsourcing services.</p>
+				<p align="center" >Financial Expert has a focused model built around clients and
+					their needs, with an emphasis on informed advice, tailored ideas
+					and solutions and the best-in-class execution.</p>
+				<p>Our Services:</p>
+				<ul>
+					<li>Advisory, capital markets and bespoke financing</li>
+					<li>Equities and equity linked products</li>
+					<li>FX, rates and credit</li>
+					<li>Award-winning research</li>
+				</ul>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -95,7 +105,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div id="uploadWindow">
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"

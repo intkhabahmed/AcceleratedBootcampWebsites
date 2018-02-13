@@ -47,7 +47,12 @@
 					Our best-known software products are the Uni-pro Windows line of
 					operating systems, the Uni-pro Office suite, and the Internet
 					Explorer and Edge web browsers. Our flagship hardware products are
-					the Xbox video game consoles and the Uni-pro Surface tablet lineup.	</p>
+					the Xbox video game consoles and the Uni-pro Surface tablet lineup.
+				</p>
+				<p align="center">Over the years Uni-pro has built
+					strong mutually beneficial relationships with over 40 international
+					clients. We possess an extensive network of contacts encompassing
+					expert technical staff and clients from years in the industry.</p>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -99,7 +104,7 @@
 			</div>
 		</form>
 	</div>
-	
+
 	<div id="uploadWindow">
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"
