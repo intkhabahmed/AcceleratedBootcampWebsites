@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Benefits Cards</title>
+<title>Financial Expert Ltd.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -40,16 +40,19 @@
 		<div class="row">
 			<div id="aboutus">
 				<h2 align="center">About Us</h2>
-				<p align="center">A leading IT services company in India. We are
-					the world's 9th largest IT services provider by revenue. As of
-					December 2015, we are ranked 10th on the Fortune India 500 list.</p>
-				<p align="center">Benefits Cards deals with management consulting, technology
-					and business process outsourcing services. The company provides
-					managed mobility services to manage mobile devices either as a
-					solution deployment life cycle or as a hosted managed service.
-					Managed mobility services include procurement, deployment, and MDM.
-					Benefits Cards strives to enable enterprises to work with a single
-					provider with a global reach, which helps reduce the complexity.</p>
+				<p align="center">Financial Expert Ltd is an Indian
+					multinational corporation that provides business consulting,
+					information technology and outsourcing services.</p>
+				<p align="center" >Financial Expert has a focused model built around clients and
+					their needs, with an emphasis on informed advice, tailored ideas
+					and solutions and the best-in-class execution.</p>
+				<p>Our Services:</p>
+				<ul>
+					<li>Advisory, capital markets and bespoke financing</li>
+					<li>Equities and equity linked products</li>
+					<li>FX, rates and credit</li>
+					<li>Award-winning research</li>
+				</ul>
 			</div>
 			<!--end aboutus-->
 		</div>
@@ -58,7 +61,8 @@
 	<!--end container-->
 	<div id="footer">
 		<footer>
-			<p align="center">&copy; Benefits Cards 2018, All Rights Reserved</p>
+			<p align="center">&copy; Financial Expert Ltd. 2018, All Rights
+				Reserved</p>
 		</footer>
 	</div>
 	<div class="overlay" title="click to close"></div>
@@ -106,7 +110,6 @@
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"
 			enctype="multipart/form-data">
-			<h4>**Max FileSize is 10 MB</h4>
 			<div class="form-group">
 				<label class="form-label" for="receiver">Choose Company</label> <br>
 				<input type="radio" name="receiver" required="required"

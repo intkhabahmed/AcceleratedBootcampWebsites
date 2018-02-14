@@ -112,6 +112,7 @@
 		<h2 align="center">Upload Proposal</h2>
 		<form class="form-vertical" method="post" action="#" id="upload_form"
 			enctype="multipart/form-data">
+			<h4>**Max FileSize is 10 MB</h4>
 			<div class="form-group">
 				<label class="form-label" for="receiver">Choose Company</label> <br>
 				<input type="radio" name="receiver" required="required"
