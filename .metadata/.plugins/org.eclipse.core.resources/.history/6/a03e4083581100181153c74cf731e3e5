@@ -59,19 +59,19 @@ Create sequence queryid_sequence start with 1 increment by 1
 Create sequence messageid_sequence start with 1 increment by 1
 /
 
-INSERT INTO ABC_USERS VALUES('beneesfradia', 'ncSrK124', 'BeneesFradia', '9876543210')
+INSERT INTO ABC_USERS VALUES('beneesfradia', 'beneesfradia', 'BeneesFradia', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('benefitscards', 'urKhW654', 'BenefitsCards', '9876543210')
+INSERT INTO ABC_USERS VALUES('benefitscards', 'benefitscards', 'BenefitsCards', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('borasys', 'oiHlG638', 'BoraSys', '9876543210')
+INSERT INTO ABC_USERS VALUES('borasys', 'borasys', 'BoraSys', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('financialexpert', 'nmHaJ983', 'FinancialExpert', '9876543210')
+INSERT INTO ABC_USERS VALUES('financialexpert', 'financialexpert', 'FinancialExpert', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('quickgunheadley', 'lkWsF728', 'QuickgunHeadley', '9876543210')
+INSERT INTO ABC_USERS VALUES('quickgunheadley', 'quickgunheadley', 'QuickgunHeadley', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('silvertax', 'nfIuT028', 'SilverTax', '9876543210')
+INSERT INTO ABC_USERS VALUES('silvertax', 'silvertax', 'SilverTax', '9876543210')
 /
-INSERT INTO ABC_USERS VALUES('unipro', 'qeRvX620', 'UniPro', '9876543210')
+INSERT INTO ABC_USERS VALUES('unipro', 'unipro', 'UniPro', '9876543210')
 /
 
 commit
