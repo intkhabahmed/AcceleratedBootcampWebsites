@@ -53,7 +53,7 @@
 							<div class="form-group">
 								<input type="hidden" name="queryId" value="${q.queryId}" />
 								<textarea class="form-control" rows="5" placeholder="Enter the answer here" name="reply"></textarea>
-								<input type="submit" name="querySubmit_btn" class="form-control btn btn-info" />
+								<input type="submit" id="querySubmit_btn" class="form-control btn btn-info" />
 							</div>
 						</form>
 					</c:if>
@@ -61,13 +61,13 @@
 						<span>${q.reply}</span>
 					</c:if>
 					</td>
-					<td><button id="delete_btn" class="btn btn-info">Delete</button></td>
+					<td><button id="deletequery_btn" class="btn btn-info delete_btn">Delete</button></td>
 				</tr>
-				<div id="confirmWindow">
+				<div id="confirmQueryWindow">
 					<h3>Are you sure want to delete this query?</h3>
 					<div class="center">
 						<a href="deleteQuery.html?queryId=${q.queryId}" id="deleteQuery_btn" class="btn btn-default">Delete</a>&nbsp;&nbsp;&nbsp;
-						<button id="cancel_btn" class="btn btn-default">Cancel</button>
+						<button class="btn btn-default cancel_btn">Cancel</button>
 					</div>
 				</div>
 			</c:forEach>			
@@ -114,13 +114,22 @@
 				<th>Sent to</th>
 				<th>Sent on</th>
 				<th>Message</th>
+				<th>Action</th>
 			</tr>
 			<c:forEach items="${messages}" var="message">
 				<tr>
 					<td>${message.receiver}</td>
 					<td>${message.messageDate}</td>
 					<td>${message.message}</td>
+					<td><button id="deleteMessage_btn" class="btn btn-info delete_btn">Delete</button></td>
 				</tr>
+				<div id="confirmMessageWindow">
+					<h3>Are you sure want to delete this message?</h3>
+					<div class="center">
+						<a href="deleteMessage.html?messageId=${message.messageId}" id="deleteQuery_btn" class="btn btn-default">Delete</a>&nbsp;&nbsp;&nbsp;
+						<button class="btn btn-default cancel_btn">Cancel</button>
+					</div>
+				</div>
 			</c:forEach>
 		</table>
 		</c:if>
@@ -129,7 +138,7 @@
 		</c:if>
 	</div>
 </div>
-<div class="overlay"></div>
+<div class="overlay" title="Click to close"></div>
 
 <c:if test="${successMessage ne null}">
 <%-- 	<div class="alert alert-success" role="alert">"${successMessage}"</div> --%>

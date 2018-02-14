@@ -108,4 +108,10 @@ public class AbcDAOImpl implements AbcDAO {
 		entityManager.remove(query);
 	}
 
+	@Override
+	public void deleteMessage(int messageId) throws SQLException {
+		Message message = entityManager.find(Message.class, messageId);
+		entityManager.remove(message);
+	}
+
 }

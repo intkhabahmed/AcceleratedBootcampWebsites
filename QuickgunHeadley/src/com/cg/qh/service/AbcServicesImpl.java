@@ -171,4 +171,15 @@ public class AbcServicesImpl implements AbcServices {
 
 	}
 
+	@Override
+	public void deleteMessage(int messageId) throws ServiceDownException {
+		try {
+			abcDAO.deleteMessage(messageId);
+		} catch (SQLException sqlException) {
+			throw new ServiceDownException(
+					"Service unavailable right now, Try Again Later!");
+		}
+
+	}
+
 }

@@ -16,10 +16,11 @@ $(function(){
 		$(this).fadeOut();
 		$("#loginWindow").fadeOut();
 		$("#uploadWindow").fadeOut();
-		$("#confirmWindow").fadeOut();
+		$("#confirmQueryWindow").fadeOut();
+		$("#confirmMessageWindow").fadeOut();
 	});
 
-	$("#uploadForm, #uploadForm_shortcut").on('click', function(){
+	$("#uploadForm").on('click', function(){
 		$(".overlay").fadeIn();
 		$("#uploadWindow").fadeIn();
 		return false;
@@ -71,14 +72,20 @@ $(function(){
 		alert("Please Contact Support Team");
 	});
 	
-	$("#delete_btn").click(function(){
+	$("#deletequery_btn").click(function(){
 		$(".overlay").fadeIn();
-		$("#confirmWindow").fadeIn();
+		$("#confirmQueryWindow").fadeIn();
 	});
 	
-	$("#cancel_btn").click(function(){
+	$("#deleteMessage_btn").click(function(){
+		$(".overlay").fadeIn();
+		$("#confirmMessageWindow").fadeIn();
+	});
+	
+	$(".cancel_btn").click(function(){
 		$(".overlay").fadeOut();
-		$("#confirmWindow").fadeOut();
+		$("#confirmQueryWindow").fadeOut();
+		$("#confirmMessageWindow").fadeOut();
 	});
 	
 });

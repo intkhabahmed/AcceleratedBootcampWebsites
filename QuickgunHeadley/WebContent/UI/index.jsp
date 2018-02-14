@@ -55,21 +55,20 @@
 		<div class="row" id="shortcut_links">
 			<div class="col-sm-4 ">
 				<div class="img-container">
-					<a href="data/sampleProposal.pdf" target="_blank"><img
-						src="images/download.png" alt="Download Problem"
-						class="img img-responsive"></a>
+					<img src="images/download.png" alt="Download Problem"
+						class="img img-responsive">
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="img-container">
-					<a href="#"><img src="images/upload.png" alt="Upload proposal"
-						class="img img-responsive" id="uploadForm_shortcut"></a>
+					<img src="images/upload.png" alt="Upload proposal"
+						class="img img-responsive" id="uploadForm_shortcut">
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="img-container">
-					<a href="#contactus"><img src="images/contact.png"
-						alt="ContactUs" class="img img-responsive"></a>
+					<img src="images/contact.png"
+						alt="ContactUs" class="img img-responsive">
 				</div>
 			</div>
 		</div>
@@ -154,11 +153,11 @@
 							<div class="form-group contact-form-fields">
 								<select name="teamName" class="form-control" required="required">
 									<option value="">--Select--</option>
-									<option value="benefitscards">Benefits Cards</option>
-									<option value="borasys">Bora-Sys</option>
-									<option value="financialexpert">Financial Expert Ltd</option>
-									<option value="silvertax">Silvertax</option>
-									<option value="unipro">Uni-pro</option>
+									<option value="BenefitsCards">Benefits Cards</option>
+									<option value="BoraSys">Bora-Sys</option>
+									<option value="FinancialExpert">Financial Expert Ltd</option>
+									<option value="SilverTax">Silvertax</option>
+									<option value="UniPro">Uni-pro</option>
 								</select>
 								<textarea cols="40" rows="5" placeholder="Message"
 									class="form-control" id="feedback" required="required"

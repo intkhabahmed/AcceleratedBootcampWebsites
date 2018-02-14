@@ -219,4 +219,21 @@ public class AbcController {
 		}
 		return returnValue;
 	}
+
+	@RequestMapping(value = "/deleteMessage.html")
+	public String deleteMessage(@RequestParam("messageId") int messageId,
+			Model model) {
+		String returnValue = "profile";
+		try {
+			abcServices.deleteMessage(messageId);
+			model.addAttribute("successMessage", "Message has been deleted");
+		} catch (ServiceDownException serviceDown) {
+			model.addAttribute("errorMessage", serviceDown.getMessage());
+			returnValue = "error";
+		} catch (Exception exception) {
+			model.addAttribute("errorMessage", exception.getMessage());
+			returnValue = "error";
+		}
+		return returnValue;
+	}
 }

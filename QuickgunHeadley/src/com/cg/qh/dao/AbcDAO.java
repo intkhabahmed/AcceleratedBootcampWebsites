@@ -34,4 +34,6 @@ public interface AbcDAO {
 
 	void deleteQuery(int queryId) throws SQLException;
 
+	void deleteMessage(int messageId) throws SQLException;
+
 }

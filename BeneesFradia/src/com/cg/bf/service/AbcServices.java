@@ -35,4 +35,6 @@ public interface AbcServices {
 
 	void deleteQuery(int queryId) throws ServiceDownException;
 
+	void deleteMessage(int messageId) throws ServiceDownException;
+
 }
